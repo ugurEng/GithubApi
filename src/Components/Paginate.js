@@ -4,14 +4,13 @@ import "./Paginate.css";
 
 
 function Paginate() {
-    const handlePageClick = async (data) => {
-        console.log(data.selected);
-        let currentPage = data.selected + 1;
-      };
-    return (
-  <div>
+  const handlePageClick = async (data) => {
+    console.log(data.selected);
+  };
 
-<ReactPaginate
+  return (
+    <div>
+      <ReactPaginate
         previousLabel={"previous"}
         nextLabel={"next"}
         breakLabel={"..."}
@@ -30,7 +29,7 @@ function Paginate() {
         breakLinkClassName={"page-link"}
         activeClassName={"active"}
       />
-  </div>
+    </div>
   );
 }
 
