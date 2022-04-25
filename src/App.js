@@ -10,6 +10,8 @@ function App() {
   const [error, setError] = React.useState(false);
   const [repos, setRepos] = React.useState([]);
 
+  repos.forEach(element => console.log(element.lenght));
+
   React.useEffect(() => {
     if (!inputValue) {
       return;
@@ -54,13 +56,25 @@ function App() {
           Unexpected Error Occurred fetching data. Please try again later!
         </div>
       )}
-      <ul className="repo_list">
-        {repos.map(repo => {
+      <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Project Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Owner</th>
+      <th scope="col">Stars</th>
+    </tr>
+  </thead>
+  <tbody>
+  {repos.map(repo => {
           return (
             <Table key={repo.id} repo={repo} />
           );
         })}
-      </ul>
+  </tbody>
+</table>
+
       {paginate && <Paginate />}
     </div>
   );

@@ -1,18 +1,17 @@
 import React from 'react'
 
-
-
-export default function Table(props) {
+function Table(props) {
   return (
-   <div> 
-    <li key={props.repo.id} className="repo_item">
-              <a href={props.repo.html_url} target="">
-                {props.repo.name}
-              </a>
-              <p >{props.repo.description}</p>
-              <p >{props.repo.owner.login}</p>
-   </li>
-   </div>
+    <tr key={props.repo.id}>
+      <th scope="row">{props.repo.id}</th>
+      <td><a href={props.repo.html_url} target="">
+        {props.repo.name}
+      </a></td>
+      <td>{props.repo.description}</td>
+      <td>{props.repo.owner.login}</td>
+      <td>{props.repo.stargazers_count}</td>
+    </tr>
 
   )
 }
+export default Table
