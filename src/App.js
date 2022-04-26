@@ -61,7 +61,7 @@ function App() {
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Project Name</th>
-      <th scope="col">Description</th>
+      <th scope="col">Descrfition|</th>
       <th scope="col">Owner</th>
       <th scope="col">Stars</th>
     </tr>
