@@ -53,7 +53,7 @@ function App() {
       {isLoading && <div>Please Wait Loading...</div>}
       {error && (
         <div>
-          Unexpected Error Occurred fetching data. Please try again later!
+          Unexpected Errord Occurred fetching data. Please try again later!
         </div>
       )}
       <table class="table table-dark">
